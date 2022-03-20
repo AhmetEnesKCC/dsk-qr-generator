@@ -10,3 +10,5 @@
 ---
 
 Used [qrcode.js](http://davidshimjs.github.io/qrcodejs/)
+
+Thank you

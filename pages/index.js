@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import Script from "next/script";
 import { AiOutlineDownload } from "react-icons/ai";
+import { saveAs } from "file-saver";
 
 export default function Home() {
   useEffect(() => {
@@ -78,7 +79,9 @@ export default function Home() {
               downloadQR(
                 document
                   .getElementById("qr-preview")
-                  .getElementsByTagName("img")[0].src
+                  .getElementsByTagName("img")[0].src,
+                url,
+                saveAs
               );
             }}
           >

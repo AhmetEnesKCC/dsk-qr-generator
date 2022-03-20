@@ -1,5 +1,4 @@
 const downloadQR = (src) => {
-  console.log(src);
   const link = document.createElement("a");
   link.href = src;
   link.download = "qr.png";

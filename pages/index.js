@@ -17,19 +17,19 @@ export default function Home() {
     e.preventDefault();
     let qr = null;
 
-    if (qrcode) {
-      if (url) {
+    if (url) {
+      if (qrcode) {
         qrcode.clear();
         qrcode.makeCode(url);
         qr = qrcode;
       } else {
-        document.getElementById("qr-preview").innerHTML = "";
-        alert("You need to enter a url or link");
+        qr = new QRCode("qr-preview", {
+          text: url,
+        });
       }
     } else {
-      qr = new QRCode("qr-preview", {
-        text: url,
-      });
+      document.getElementById("qr-preview").innerHTML = "";
+      alert("You need to enter a url or link");
     }
     setQRCode(qr);
   };

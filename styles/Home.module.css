@@ -6,16 +6,6 @@
   row-gap: 20px;
 }
 
-@media screen and (max-width: 756px) {
-  .container {
-    width: 100vw;
-    padding: 20px;
-  }
-  .title img {
-    display: none;
-  }
-}
-
 .title {
   font-family: Poppins-Bold;
   color: #212121;
@@ -111,4 +101,17 @@
 
 .download:hover {
   filter: brightness(1.2);
+}
+
+@media screen and (max-width: 756px) {
+  .container {
+    width: 100vw;
+    padding: 20px;
+  }
+  .title img {
+    display: none;
+  }
+  .qr-preview {
+    width: 100vw;
+  }
 }
